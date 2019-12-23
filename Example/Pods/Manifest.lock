@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - ZMJNoDataView (0.1.0)
+  - ZMJNoDataView (0.0.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  ZMJNoDataView: 19ede0ca710871f823afd42373e1edf97d1c8610
+  ZMJNoDataView: 3044c06ed1512970dfe7832f035e9dc5d70c57d5
 
 PODFILE CHECKSUM: f9d63ece465e0fc552ecd7d1ed9df39fc7326d40
 

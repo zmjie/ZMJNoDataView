@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "ZMJNoDataView.h"
 
 FOUNDATION_EXPORT double ZMJNoDataViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZMJNoDataViewVersionString[];
