@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - ZMJNoDataView (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - ZMJNoDataView (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  ZMJNoDataView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  ZMJNoDataView: 19ede0ca710871f823afd42373e1edf97d1c8610
+
+PODFILE CHECKSUM: f9d63ece465e0fc552ecd7d1ed9df39fc7326d40
+
+COCOAPODS: 1.8.4

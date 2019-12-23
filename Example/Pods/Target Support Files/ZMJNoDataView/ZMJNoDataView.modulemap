@@ -1,0 +1,6 @@
+framework module ZMJNoDataView {
+  umbrella header "ZMJNoDataView-umbrella.h"
+
+  export *
+  module * { export * }
+}
