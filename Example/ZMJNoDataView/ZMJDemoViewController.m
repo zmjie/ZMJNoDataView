@@ -53,46 +53,46 @@
 
 - (void)zmj_initRequest {
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-
-        ZMJNoDataView *zmj_ndv = [ZMJNoDataView zmj_showNDVAddedTo:self.zmj_tableViewPlain zmj_style:ZMJNoDataViewStyleGesture zmj_delegate:self];
-        zmj_ndv.zmj_ndvImageView.image = zmj_imageNamed(@"zmj_ndv_netError");
-        zmj_ndv.zmj_ndvLabel.text = @"无网络";
-        [zmj_ndv.zmj_ndvBtn setTitle:@"重新加载" forState:UIControlStateNormal];
-        [zmj_ndv.zmj_ndvBtn setTitleColor:[UIColor zmj_dynamicColor:zmj_color(51, 51, 51) zmj_darkColor:zmj_color(51, 51, 51)] forState:UIControlStateNormal];
-        [self.zmj_tableViewPlain addSubview:zmj_ndv];
-    });
-    
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //
-//        switch (self.zmj_index) {
-//
-//            case 0: {
-//
-//                [ZMJNoDataView zmj_showNDVAndMessage:@"无网络" zmj_image:@"zmj_ndv_netError" zmj_text:@"重新加载" zmj_textColor:[UIColor zmj_dynamicColor:zmj_color(51, 51, 51) zmj_darkColor:zmj_color(51, 51, 51)] zmj_style:ZMJNoDataViewStyleBtn zmj_toView:self.zmj_tableViewPlain zmj_clickHandler:^{
-//
-//                    [ZMJNoDataView zmj_hideNDVForView:self.zmj_tableViewPlain];
-//
-//                    [self zmj_initRequest];
-//                }];
-//            }
-//                break;
-//
-//            case 1: {
-//
-//                [ZMJNoDataView zmj_showNDVAndMessage:@"暂无数据" zmj_image:@"zmj_ndv_noData" zmj_style:ZMJNoDataViewStyleGesture zmj_toView:self.zmj_tableViewPlain zmj_clickHandler:^{
-//
-//                    [ZMJNoDataView zmj_hideNDVForView:self.zmj_tableViewPlain];
-//
-//                    [self zmj_initRequest];
-//                }];
-//            }
-//                break;
-//
-//            default:
-//                break;
-//        }
+//        ZMJNoDataView *zmj_ndv = [ZMJNoDataView zmj_showNDVAddedTo:self.zmj_tableViewPlain zmj_style:ZMJNoDataViewStyleGesture zmj_delegate:self];
+//        zmj_ndv.zmj_ndvImageView.image = zmj_imageNamed(@"zmj_ndv_netError");
+//        zmj_ndv.zmj_ndvLabel.text = @"无网络";
+//        [zmj_ndv.zmj_ndvBtn setTitle:@"重新加载" forState:UIControlStateNormal];
+//        [zmj_ndv.zmj_ndvBtn setTitleColor:[UIColor zmj_dynamicColor:zmj_color(51, 51, 51) zmj_darkColor:zmj_color(51, 51, 51)] forState:UIControlStateNormal];
+//        [self.zmj_tableViewPlain addSubview:zmj_ndv];
 //    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+        switch (self.zmj_index) {
+
+            case 0: {
+
+                [ZMJNoDataView zmj_showNDVAndMessage:@"无网络" zmj_image:@"zmj_ndv_netError" zmj_text:@"重新加载" zmj_textColor:[UIColor zmj_dynamicColor:zmj_color(51, 51, 51) zmj_darkColor:zmj_color(51, 51, 51)] zmj_style:ZMJNoDataViewStyleBtn zmj_toView:self.zmj_tableViewPlain zmj_clickHandler:^{
+
+                    [ZMJNoDataView zmj_hideNDVForView:self.zmj_tableViewPlain];
+
+                    [self zmj_initRequest];
+                }];
+            }
+                break;
+
+            case 1: {
+
+                [ZMJNoDataView zmj_showNDVAndMessage:@"暂无数据" zmj_image:@"zmj_ndv_noData" zmj_style:ZMJNoDataViewStyleGesture zmj_toView:self.zmj_tableViewPlain zmj_clickHandler:^{
+
+                    [ZMJNoDataView zmj_hideNDVForView:self.zmj_tableViewPlain];
+
+                    [self zmj_initRequest];
+                }];
+            }
+                break;
+
+            default:
+                break;
+        }
+    });
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

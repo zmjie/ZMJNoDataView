@@ -190,9 +190,9 @@
 
 - (void)zmj_initGesture {
     
-    UITapGestureRecognizer *dyt_tap = [[UITapGestureRecognizer alloc] init];
-    [dyt_tap addTarget:self action:@selector(dyt_m_tap:)];
-    [self addGestureRecognizer:dyt_tap];
+    UITapGestureRecognizer *zmj_tap = [[UITapGestureRecognizer alloc] init];
+    [zmj_tap addTarget:self action:@selector(zmj_tap:)];
+    [self addGestureRecognizer:zmj_tap];
 }
 
 - (UIView *)zmj_contentView {
@@ -243,7 +243,7 @@
     [self zmj_btnActionBlock:btn];
 }
 
-- (void)dyt_m_tap:(UITapGestureRecognizer *)tap {
+- (void)zmj_tap:(UITapGestureRecognizer *)tap {
     
     if ([self.zmj_delegate respondsToSelector:@selector(zmj_ndvTapAction:)]) {
 
