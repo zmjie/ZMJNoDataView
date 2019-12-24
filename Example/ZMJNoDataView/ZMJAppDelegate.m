@@ -8,11 +8,24 @@
 
 #import "ZMJAppDelegate.h"
 
+#import "ZMJViewController.h"
+
+#import <UIColor+ZMJNoDataView.h>
+
 @implementation ZMJAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window.backgroundColor = [UIColor zmj_dynamicColor:[UIColor whiteColor] zmj_darkColor:[UIColor whiteColor]];
+    [self.window makeKeyAndVisible];
+    
+    ZMJViewController *zmj_vc = [[ZMJViewController alloc] init];
+    UINavigationController *zmj_navVC = [[UINavigationController alloc] initWithRootViewController:zmj_vc];
+    self.window.rootViewController = zmj_navVC;
+    
     return YES;
 }
 

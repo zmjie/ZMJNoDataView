@@ -6,8 +6,12 @@
 //  Copyright (c) 2019 zmjie. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface ZMJViewController : UIViewController
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -1,3 +1,5 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
 
 platform :ios, '8.0'
@@ -8,6 +10,8 @@ target 'ZMJNoDataView_Example' do
   target 'ZMJNoDataView_Tests' do
     inherit! :search_paths
 
+    pod 'Masonry', '~> 1.1.0'
     pod 'FBSnapshotTestCase'
+    
   end
 end

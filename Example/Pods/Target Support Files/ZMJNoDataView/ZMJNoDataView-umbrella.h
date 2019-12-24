@@ -10,6 +10,10 @@
 #endif
 #endif
 
+#import "UIColor+ZMJNoDataView.h"
+#import "UIView+ZMJNoDataView.h"
+#import "ZMJMacro.h"
+#import "ZMJNoDataView+ZMJ.h"
 #import "ZMJNoDataView.h"
 
 FOUNDATION_EXPORT double ZMJNoDataViewVersionNumber;
