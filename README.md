@@ -17,12 +17,12 @@ ZMJNoDataView is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ZMJNoDataView'
+pod 'ZMJNoDataView', '~> 0.0.2'
 ```
 
 ## Author
 
-zmjie, 1399824158@qq.com
+zmjie
 
 ## License
 

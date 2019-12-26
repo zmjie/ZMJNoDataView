@@ -2,7 +2,7 @@
 //  ZMJNoDataView.m
 //  ZMJNoDataView_Example
 //
-//  Created by qx on 2019/12/21.
+//  Created by zmjie on 2019/12/21.
 //  Copyright © 2019 zmjie. All rights reserved.
 //
 

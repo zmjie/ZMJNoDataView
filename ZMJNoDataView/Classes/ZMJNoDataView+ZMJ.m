@@ -2,7 +2,7 @@
 //  ZMJNoDataView+ZMJ.m
 //  ZMJNoDataView
 //
-//  Created by qx on 2019/12/23.
+//  Created by zmjie on 2019/12/23.
 //
 
 #import "ZMJNoDataView+ZMJ.h"
