@@ -12,9 +12,10 @@
 
 #import "UIColor+ZMJNoDataView.h"
 #import "UIView+ZMJNoDataView.h"
-#import "ZMJNoDataView_Macro.h"
+#import "UIViewController+ZMJNoDataView.h"
 #import "ZMJNoDataView+ZMJ.h"
 #import "ZMJNoDataView.h"
+#import "ZMJNoDataView_Macro.h"
 
 FOUNDATION_EXPORT double ZMJNoDataViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZMJNoDataViewVersionString[];

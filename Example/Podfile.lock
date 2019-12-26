@@ -1,21 +1,14 @@
 PODS:
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
   - Masonry (1.1.0)
-  - ZMJNoDataView (0.0.1):
+  - ZMJNoDataView (0.0.2):
     - Masonry (~> 1.1.0)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase
   - Masonry (~> 1.1.0)
   - ZMJNoDataView (from `../`)
 
 SPEC REPOS:
   trunk:
-    - FBSnapshotTestCase
     - Masonry
 
 EXTERNAL SOURCES:
@@ -23,10 +16,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  ZMJNoDataView: a71a144cb834dff5a523b3d034d423174fe35ac1
+  ZMJNoDataView: dfce98b6e65197b1a8761944daa9dab25222e22f
 
-PODFILE CHECKSUM: 034b09b5285bb323799b63f47611064cf77a9ca5
+PODFILE CHECKSUM: 66d27bc0d9b2c9975171da9af4306c5579413218
 
 COCOAPODS: 1.8.4

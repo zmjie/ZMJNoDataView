@@ -2,7 +2,7 @@
 //  UIViewController+ZMJNoDataView.h
 //  ZMJNoDataView
 //
-//  Created by qx on 2019/12/26.
+//  Created by zmjie on 2019/12/26.
 //
 
 #import <UIKit/UIKit.h>
