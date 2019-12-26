@@ -12,7 +12,7 @@
 
 #import "UIColor+ZMJNoDataView.h"
 #import "UIView+ZMJNoDataView.h"
-#import "ZMJMacro.h"
+#import "ZMJNoDataView_Macro.h"
 #import "ZMJNoDataView+ZMJ.h"
 #import "ZMJNoDataView.h"
 

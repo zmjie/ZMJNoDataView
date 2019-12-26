@@ -10,7 +10,7 @@
 #import "ZMJDemoViewController.h"
 
 #import <Masonry/Masonry.h>
-#import <ZMJNoDataView/ZMJMacro.h>
+#import <ZMJNoDataView/ZMJNoDataView_Macro.h>
 #import <ZMJNoDataView/UIColor+ZMJNoDataView.h>
 
 @interface ZMJViewController () <UITableViewDelegate, UITableViewDataSource>

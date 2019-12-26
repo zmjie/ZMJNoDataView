@@ -8,10 +8,11 @@
 
 #import "ZMJNoDataView.h"
 
-#import "ZMJMacro.h"
+#import "ZMJNoDataView_Macro.h"
 
 #import "UIColor+ZMJNoDataView.h"
 #import "UIView+ZMJNoDataView.h"
+#import "UIViewController+ZMJNoDataView.h"
 
 #import <Masonry/Masonry.h>
 
@@ -61,6 +62,12 @@
 }
 
 + (instancetype)zmj_showNDVAddedTo:(UIView *)view zmj_style:(ZMJNoDataViewStyle)style zmj_delegate:(nullable id<zmj_ndvDelegate>)delegate {
+    
+    if (view) {}
+    else {
+        
+        view = [UIViewController zmj_topViewController].view;
+    }
     
     return [self zmj_showNDVAddedTo:view zmj_frame:view.bounds zmj_style:style zmj_delegate:delegate];
 }

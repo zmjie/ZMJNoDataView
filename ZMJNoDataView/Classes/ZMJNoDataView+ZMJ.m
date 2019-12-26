@@ -7,7 +7,7 @@
 
 #import "ZMJNoDataView+ZMJ.h"
 
-#import "ZMJMacro.h"
+#import "ZMJNoDataView_Macro.h"
 
 #import <objc/runtime.h>
 
@@ -27,11 +27,6 @@ static char *zmj_clickHandler;
 
 + (ZMJNoDataView *)zmj_showNDVAndMessage:(NSString *)message zmj_image:(NSString *)image zmj_style:(ZMJNoDataViewStyle)style zmj_toView:(UIView *)view zmj_clickHandler:(ZMJNDVActionBlock)clickHandler {
     
-    if (!view) {
-        
-        view = [UIApplication sharedApplication].keyWindow;
-    }
-    
     ZMJNoDataView *zmj_ndv = [ZMJNoDataView zmj_showNDVAddedTo:view zmj_style:style zmj_delegate:nil];
     
     zmj_ndv.zmj_ndvImageView.image = zmj_imageNamed(image);
@@ -45,11 +40,6 @@ static char *zmj_clickHandler;
 
 + (ZMJNoDataView *)zmj_showNDVAndMessage:(NSString *)message zmj_image:(NSString *)image zmj_style:(ZMJNoDataViewStyle)style zmj_toView:(UIView *)view zmj_frame:(CGRect)frame zmj_clickHandler:(ZMJNDVActionBlock)clickHandler {
     
-    if (!view) {
-        
-        view = [UIApplication sharedApplication].keyWindow;
-    }
-    
     ZMJNoDataView *zmj_ndv = [ZMJNoDataView zmj_showNDVAddedTo:view zmj_frame:frame zmj_style:style zmj_delegate:nil];
     
     zmj_ndv.zmj_ndvImageView.image = zmj_imageNamed(image);
@@ -61,11 +51,6 @@ static char *zmj_clickHandler;
 }
 
 + (ZMJNoDataView *)zmj_showNDVAndMessage:(NSString *)message zmj_image:(NSString *)image zmj_text:(NSString *)text zmj_textColor:(UIColor *)color zmj_style:(ZMJNoDataViewStyle)style zmj_toView:(UIView *)view zmj_clickHandler:(ZMJNDVActionBlock)clickHandler {
-    
-    if (!view) {
-        
-        view = [UIApplication sharedApplication].keyWindow;
-    }
     
     ZMJNoDataView *zmj_ndv = [ZMJNoDataView zmj_showNDVAddedTo:view zmj_style:style zmj_delegate:nil];
     
@@ -83,11 +68,6 @@ static char *zmj_clickHandler;
 
 + (ZMJNoDataView *)zmj_showNDVAndMessage:(NSString *)message zmj_text:(NSString *)text zmj_image:(NSString *)image zmj_textColor:(UIColor *)color zmj_style:(ZMJNoDataViewStyle)style zmj_toView:(UIView *)view zmj_frame:(CGRect)frame zmj_clickHandler:(ZMJNDVActionBlock)clickHandler {
     
-    if (!view) {
-        
-        view = [UIApplication sharedApplication].keyWindow;
-    }
-    
     ZMJNoDataView *zmj_ndv = [ZMJNoDataView zmj_showNDVAddedTo:view zmj_frame:frame zmj_style:style zmj_delegate:nil];
     
     zmj_ndv.zmj_ndvImageView.image = zmj_imageNamed(image);
@@ -103,11 +83,6 @@ static char *zmj_clickHandler;
 }
 
 + (void)zmj_hideNDVForView:(UIView *)view {
-    
-    if (!view) {
-        
-        view = [UIApplication sharedApplication].keyWindow;
-    }
     
     [self zmj_hideNDVForToView:view];
 }

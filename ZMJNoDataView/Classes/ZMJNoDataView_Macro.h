@@ -1,12 +1,12 @@
 //
-//  ZMJMacro.h
+//  ZMJNoDataView_Macro.h
 //  ZMJNoDataView
 //
 //  Created by zmjie on 2019/12/23.
 //
 
-#ifndef ZMJMacro_h
-#define ZMJMacro_h
+#ifndef ZMJNoDataView_Macro_h
+#define ZMJNoDataView_Macro_h
 
 // 屏幕宽度
 #define zmj_screenWidth (int)MIN([UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width)
@@ -41,4 +41,4 @@
 // 字体
 #define zmj_pingFangSCRegularSize(R) [UIFont fontWithName:(@"PingFangSC-Regular") size:(zmj_ratio * R)] ? : zmj_fontSize(R)
 
-#endif /* ZMJMacro_h */
+#endif /* ZMJNoDataView_Macro_h */

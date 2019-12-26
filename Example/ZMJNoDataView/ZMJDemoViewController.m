@@ -8,7 +8,7 @@
 
 #import "ZMJDemoViewController.h"
 
-#import <ZMJNoDataView/ZMJMacro.h>
+#import <ZMJNoDataView/ZMJNoDataView_Macro.h>
 
 #import <Masonry/Masonry.h>
 #import <ZMJNoDataView/ZMJNoDataView.h>

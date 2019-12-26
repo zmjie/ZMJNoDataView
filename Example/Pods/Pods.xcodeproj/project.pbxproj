@@ -63,7 +63,7 @@
 		D614F9B3CD18B3066A9E0073AC602F03 /* ZMJNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 599B22E5AB020F9EF0106C02ECF8F326 /* ZMJNoDataView.m */; };
 		D9EE1F887DDFB416ADF4A7306322187D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C659800879B63083DE392800723BE1 /* Foundation.framework */; };
 		E04B122BDCC3F9EAB85D0B27808FAF99 /* Pods-ZMJNoDataView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D63F502B16ECD5DD8A0067DE41352C8 /* Pods-ZMJNoDataView_Example-dummy.m */; };
-		E08F8F959EA20F2236C9AD7411C08514 /* ZMJMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DE5BA8C59DB2EF06C3EBE03908DB112 /* ZMJMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E08F8F959EA20F2236C9AD7411C08514 /* ZMJNoDataView_Macro.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DE5BA8C59DB2EF06C3EBE03908DB112 /* ZMJNoDataView_Macro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0B8D095C732352C854D365B9E5B993D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9622FCB360DEC4256351F3BB2B53974E /* UIKit.framework */; };
 		E1D67BCC89E3D41C4134DE7F070E36A2 /* Pods-ZMJNoDataView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2691FC0B2FDC33FCD5D6742C43B0319 /* Pods-ZMJNoDataView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E51F496BDC6ACADE04FDA059C6CB2342 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C659800879B63083DE392800723BE1 /* Foundation.framework */; };
@@ -72,6 +72,8 @@
 		E8DD5D1D406150E1C80AD015271B6848 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D86EA2AB4C2CAB5E1B88AD89CEF415 /* MASConstraint.m */; };
 		EAE8B0895956885A752B173683A0D889 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 68EEB53888D9DC9DC5DF76F836F84C61 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1AAAE00BB32B733B238E2B4E8424506 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 41FAE5C926DB40D236540453E01F6BFE /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F22014F223B44CC0003CE4D4 /* UIViewController+ZMJNoDataView.h in Headers */ = {isa = PBXBuildFile; fileRef = F22014F023B44CC0003CE4D4 /* UIViewController+ZMJNoDataView.h */; };
+		F22014F323B44CC0003CE4D4 /* UIViewController+ZMJNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22014F123B44CC0003CE4D4 /* UIViewController+ZMJNoDataView.m */; };
 		F720FAF13A108CE6901E0A8B0580E1E8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43CC20AD4F902B45548B8D9BAD4B0C77 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAFBFA90F7BC3E7CF50F8A5CF0A8B264 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 76DDF08C39BD8CD5427671E45F4BAC20 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC5EE61623F463AA6E5DE664821B4C48 /* ZMJNoDataView+ZMJ.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C5168B96019C3C7FB2A3EE7EB61CD5E /* ZMJNoDataView+ZMJ.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -153,7 +155,7 @@
 		4A641AAEE41BE2CC63A32D0BAB67EC72 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
 		4BED5611856700024C3B6BDA38806C92 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		4D63F502B16ECD5DD8A0067DE41352C8 /* Pods-ZMJNoDataView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZMJNoDataView_Example-dummy.m"; sourceTree = "<group>"; };
-		4DE5BA8C59DB2EF06C3EBE03908DB112 /* ZMJMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMJMacro.h; path = ZMJNoDataView/Classes/ZMJMacro.h; sourceTree = "<group>"; };
+		4DE5BA8C59DB2EF06C3EBE03908DB112 /* ZMJNoDataView_Macro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZMJNoDataView_Macro.h; path = ZMJNoDataView/Classes/ZMJNoDataView_Macro.h; sourceTree = "<group>"; };
 		510EF75A796FF1AD0916F77BBB1D76BF /* Pods-ZMJNoDataView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZMJNoDataView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		538E7F5350A389FCCF481A6BC30E7F72 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
 		571D18C2E4315CA0EE50281AEB95D9C8 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +223,8 @@
 		E7A0583DD0F9C4ED89EFCAB6AC5E6D8A /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		ECFCD01E626F93773D3939F1AEDE6528 /* Pods_ZMJNoDataView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZMJNoDataView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C68754117DF283C0221567173AB29C /* ZMJNoDataView+ZMJ.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ZMJNoDataView+ZMJ.m"; path = "ZMJNoDataView/Classes/ZMJNoDataView+ZMJ.m"; sourceTree = "<group>"; };
+		F22014F023B44CC0003CE4D4 /* UIViewController+ZMJNoDataView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ZMJNoDataView.h"; path = "ZMJNoDataView/Classes/UIViewController+ZMJNoDataView.h"; sourceTree = "<group>"; };
+		F22014F123B44CC0003CE4D4 /* UIViewController+ZMJNoDataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ZMJNoDataView.m"; path = "ZMJNoDataView/Classes/UIViewController+ZMJNoDataView.m"; sourceTree = "<group>"; };
 		FA20813FD3AFB6B9BC1349C148837ADB /* Pods-ZMJNoDataView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZMJNoDataView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		FD43EB6F08175E8364D93DE89E4F1623 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -394,7 +398,7 @@
 		70AD7D36CEDB8F0F3A6E9893C52BDA0D /* ZMJNoDataView */ = {
 			isa = PBXGroup;
 			children = (
-				4DE5BA8C59DB2EF06C3EBE03908DB112 /* ZMJMacro.h */,
+				4DE5BA8C59DB2EF06C3EBE03908DB112 /* ZMJNoDataView_Macro.h */,
 				85C1F0861C90380B7165F64017C79A46 /* ZMJNoDataView.h */,
 				599B22E5AB020F9EF0106C02ECF8F326 /* ZMJNoDataView.m */,
 				7C5168B96019C3C7FB2A3EE7EB61CD5E /* ZMJNoDataView+ZMJ.h */,
@@ -403,6 +407,8 @@
 				171632658A99BC6A9D0CC4E3F70DE237 /* UIColor+ZMJNoDataView.m */,
 				DAD542B113667906E9D5FBD75A3C1C8C /* UIView+ZMJNoDataView.h */,
 				E44604D1F6747BE5769DF054465A4425 /* UIView+ZMJNoDataView.m */,
+				F22014F023B44CC0003CE4D4 /* UIViewController+ZMJNoDataView.h */,
+				F22014F123B44CC0003CE4D4 /* UIViewController+ZMJNoDataView.m */,
 				D50D19882A251A00A077404D6DE49275 /* Pod */,
 				411A9328D85E16453634A9E042905858 /* Support Files */,
 			);
@@ -576,9 +582,10 @@
 			files = (
 				01E7581FD69879528DE1C3689D4BD335 /* UIColor+ZMJNoDataView.h in Headers */,
 				CB52FFBBEE28F68490AF419122577F64 /* UIView+ZMJNoDataView.h in Headers */,
-				E08F8F959EA20F2236C9AD7411C08514 /* ZMJMacro.h in Headers */,
+				E08F8F959EA20F2236C9AD7411C08514 /* ZMJNoDataView_Macro.h in Headers */,
 				FC5EE61623F463AA6E5DE664821B4C48 /* ZMJNoDataView+ZMJ.h in Headers */,
 				9CFB56C4A514B828D4765469773C8B33 /* ZMJNoDataView-umbrella.h in Headers */,
+				F22014F223B44CC0003CE4D4 /* UIViewController+ZMJNoDataView.h in Headers */,
 				FDCBFCC32FFA8AE2BB1A926F26952486 /* ZMJNoDataView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -814,6 +821,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22014F323B44CC0003CE4D4 /* UIViewController+ZMJNoDataView.m in Sources */,
 				965EE6836AA5BB30C559EEC6D9F771E0 /* UIColor+ZMJNoDataView.m in Sources */,
 				B2B510D3506BF0E19D602A5C929CFB04 /* UIView+ZMJNoDataView.m in Sources */,
 				8E2E253E1DB032FA758BF4E000561665 /* ZMJNoDataView+ZMJ.m in Sources */,
