@@ -106,7 +106,7 @@
         
         if (@available(iOS 11.0, *)) {
             
-            _zmj_tableViewPlain.contentInsetAdjustmentBehavior   = UIScrollViewContentInsetAdjustmentNever;
+            _zmj_tableViewPlain.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
     }
     return _zmj_tableViewPlain;
