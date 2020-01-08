@@ -1,6 +1,6 @@
 PODS:
   - Masonry (1.1.0)
-  - ZMJNoDataView (0.0.2):
+  - ZMJNoDataView (0.0.5):
     - Masonry (~> 1.1.0)
 
 DEPENDENCIES:
@@ -8,7 +8,7 @@ DEPENDENCIES:
   - ZMJNoDataView (from `../`)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - Masonry
 
 EXTERNAL SOURCES:
@@ -17,8 +17,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  ZMJNoDataView: dfce98b6e65197b1a8761944daa9dab25222e22f
+  ZMJNoDataView: def2d8ea2b4098974c4130886af377f887ca5705
 
-PODFILE CHECKSUM: 66d27bc0d9b2c9975171da9af4306c5579413218
+PODFILE CHECKSUM: 65e14f3baa65e52dadc3457345cc14a92b46b74f
 
 COCOAPODS: 1.8.4

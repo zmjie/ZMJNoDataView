@@ -25,6 +25,10 @@
 
 #define zmj_colora(r, g, b, a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:a]
 
+#define zmj_weakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
+
+#define zmj_strongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
+
 // 获取图片
 #define zmj_imageNamed(name) [UIImage imageNamed:(name)]
 
