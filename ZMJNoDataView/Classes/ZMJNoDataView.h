@@ -32,6 +32,8 @@ typedef NS_ENUM(NSUInteger, ZMJNoDataViewStyle) {
 @property (strong, nonatomic, readonly) UILabel *zmj_ndvLabel;
 @property (strong, nonatomic, readonly) UIButton *zmj_ndvBtn;
 
+@property (assign, nonatomic) CGFloat zmj_cornerRadius;
+
 + (instancetype)zmj_showNDVAddedTo:(UIView *)view zmj_style:(ZMJNoDataViewStyle)style zmj_delegate:(nullable id<zmj_ndvDelegate>)delegate;
 
 + (instancetype)zmj_showNDVAddedTo:(UIView *)view zmj_frame:(CGRect)frame zmj_style:(ZMJNoDataViewStyle)style zmj_delegate:(nullable id<zmj_ndvDelegate>)delegate;

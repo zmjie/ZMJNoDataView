@@ -14,6 +14,7 @@
 #import <ZMJNoDataView/ZMJNoDataView.h>
 #import <ZMJNoDataView/ZMJNoDataView+ZMJ.h>
 #import <ZMJNoDataView/UIColor+ZMJNoDataView.h>
+#import <ZMJNoDataView/UIView+ZMJNoDataView.h>
 
 @interface ZMJDemoViewController () <UITableViewDelegate, UITableViewDataSource, zmj_ndvDelegate>
 
@@ -70,12 +71,14 @@
             case 0: {
                 
                 @zmj_weakObj(self);
-                [ZMJNoDataView zmj_showNDVAndMessage:@"无网络" zmj_image:@"zmj_ndv_netError" zmj_text:@"重新加载" zmj_textColor:[UIColor zmj_dynamicColor:zmj_color(51, 51, 51) zmj_darkColor:zmj_color(51, 51, 51)] zmj_style:ZMJNoDataViewStyleBtn zmj_toView:self.zmj_tableViewPlain zmj_clickHandler:^{
+                ZMJNoDataView *zmj_noDataView = [ZMJNoDataView zmj_showNDVAndMessage:@"无网络" zmj_image:@"zmj_ndv_netError" zmj_text:@"重新加载" zmj_textColor:[UIColor zmj_dynamicColor:zmj_color(51, 51, 51) zmj_darkColor:zmj_color(51, 51, 51)] zmj_style:ZMJNoDataViewStyleBtn zmj_toView:self.zmj_tableViewPlain zmj_clickHandler:^{
                     @zmj_strongObj(self);
                     [ZMJNoDataView zmj_hideNDVForView:self.zmj_tableViewPlain];
 
                     [self zmj_initRequest];
                 }];
+                
+                zmj_noDataView.zmj_cornerRadius = 10086;
             }
                 break;
 

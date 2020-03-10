@@ -40,6 +40,7 @@
         _zmj_style = style;
         _zmj_delegate = delegate;
         
+        [self zmj_initData];
         [self zmj_initView];
         [self zmj_makeSubViewsConstraints];
         
@@ -120,6 +121,26 @@
     return nil;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    if (self.zmj_width == 0) {
+        return;
+    }
+    
+    if (_zmj_ndvBtn.zmj_height > 0) {
+        
+        _zmj_ndvBtn.layer.cornerRadius = _zmj_cornerRadius > _zmj_ndvBtn.zmj_height ? _zmj_ndvBtn.zmj_height / 2 : _zmj_cornerRadius;
+    }
+}
+
+- (void)setZmj_cornerRadius:(CGFloat)zmj_cornerRadius {
+    
+    _zmj_cornerRadius = zmj_cornerRadius;
+    
+    [self layoutIfNeeded];
+}
+
 - (void)zmj_initView {
     
     [self addSubview:self.zmj_contentView];
@@ -145,6 +166,11 @@
         default:
             break;
     }
+}
+
+- (void)zmj_initData {
+    
+    _zmj_cornerRadius = 5.0f;
 }
 
 - (void)zmj_makeSubViewsConstraints {
@@ -233,8 +259,9 @@
         _zmj_ndvBtn = [UIButton buttonWithType:UIButtonTypeSystem];
         _zmj_ndvBtn.titleLabel.font = zmj_pingFangSCRegularSize((zmj_defaultFontSize + 2));
         [_zmj_ndvBtn addTarget:self action:@selector(zmj_btnAction:) forControlEvents:UIControlEventTouchUpInside];
+        
         _zmj_ndvBtn.layer.borderWidth = 1;
-        _zmj_ndvBtn.layer.cornerRadius = 5;
+        _zmj_ndvBtn.clipsToBounds = YES;
     }
     return _zmj_ndvBtn;
 }

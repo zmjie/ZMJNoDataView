@@ -66,7 +66,7 @@ static char *zmj_clickHandler;
     return zmj_ndv;
 }
 
-+ (ZMJNoDataView *)zmj_showNDVAndMessage:(NSString *)message zmj_text:(NSString *)text zmj_image:(NSString *)image zmj_textColor:(UIColor *)color zmj_style:(ZMJNoDataViewStyle)style zmj_toView:(UIView *)view zmj_frame:(CGRect)frame zmj_clickHandler:(ZMJNDVActionBlock)clickHandler {
++ (ZMJNoDataView *)zmj_showNDVAndMessage:(NSString *)message zmj_image:(NSString *)image zmj_text:(NSString *)text zmj_textColor:(UIColor *)color zmj_style:(ZMJNoDataViewStyle)style zmj_toView:(UIView *)view zmj_frame:(CGRect)frame zmj_clickHandler:(ZMJNDVActionBlock)clickHandler {
     
     ZMJNoDataView *zmj_ndv = [ZMJNoDataView zmj_showNDVAddedTo:view zmj_frame:frame zmj_style:style zmj_delegate:nil];
     
