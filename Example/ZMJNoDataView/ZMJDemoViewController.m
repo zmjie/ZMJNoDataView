@@ -71,7 +71,7 @@
             case 0: {
                 
                 @zmj_weakObj(self);
-                ZMJNoDataView *zmj_noDataView = [ZMJNoDataView zmj_showNDVAndMessage:@"无网络" zmj_image:@"zmj_ndv_netError" zmj_text:@"重新加载" zmj_textColor:[UIColor zmj_dynamicColor:zmj_color(51, 51, 51) zmj_darkColor:zmj_color(51, 51, 51)] zmj_style:ZMJNoDataViewStyleBtn zmj_toView:self.zmj_tableViewPlain zmj_clickHandler:^{
+                ZMJNoDataView *zmj_noDataView = [ZMJNoDataView zmj_showNDVAndStyle:ZMJNoDataViewStyleBtn zmj_message:@"无网络" zmj_image:@"zmj_ndv_netError" zmj_btnText:@"重新加载" zmj_toView:self.zmj_tableViewPlain zmj_clickHandler:^{
                     @zmj_strongObj(self);
                     [ZMJNoDataView zmj_hideNDVForView:self.zmj_tableViewPlain];
 
@@ -85,7 +85,7 @@
             case 1: {
                 
                 @zmj_weakObj(self);
-                [ZMJNoDataView zmj_showNDVAndMessage:@"暂无数据" zmj_image:@"zmj_ndv_noData" zmj_style:ZMJNoDataViewStyleGesture zmj_toView:self.zmj_tableViewPlain zmj_clickHandler:^{
+                [ZMJNoDataView zmj_showNDVAndStyle:ZMJNoDataViewStyleGesture zmj_message:@"暂无数据" zmj_image:@"zmj_ndv_noData" zmj_toView:self.zmj_tableViewPlain zmj_clickHandler:^{
                     @zmj_strongObj(self);
                     [ZMJNoDataView zmj_hideNDVForView:self.zmj_tableViewPlain];
 

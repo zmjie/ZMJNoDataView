@@ -15,13 +15,13 @@ typedef void(^ZMJNDVActionBlock)(void);
 
 @property (copy, nonatomic) ZMJNDVActionBlock zmj_ndvActionBlock;
 
-+ (ZMJNoDataView *)zmj_showNDVAndMessage:(NSString *)message zmj_image:(NSString *)image zmj_style:(ZMJNoDataViewStyle)style zmj_toView:(UIView *)view zmj_clickHandler:(ZMJNDVActionBlock)clickHandler;
++ (ZMJNoDataView *)zmj_showNDVAndStyle:(ZMJNoDataViewStyle)style zmj_message:(NSString *)message zmj_image:(NSString *)image zmj_toView:(UIView *)view zmj_clickHandler:(ZMJNDVActionBlock)clickHandler;
 
-+ (ZMJNoDataView *)zmj_showNDVAndMessage:(NSString *)message zmj_image:(NSString *)image zmj_style:(ZMJNoDataViewStyle)style zmj_toView:(UIView *)view zmj_frame:(CGRect)frame zmj_clickHandler:(ZMJNDVActionBlock)clickHandler;
++ (ZMJNoDataView *)zmj_showNDVAndStyle:(ZMJNoDataViewStyle)style zmj_message:(NSString *)message zmj_image:(NSString *)image zmj_toView:(UIView *)view zmj_frame:(CGRect)frame zmj_clickHandler:(ZMJNDVActionBlock)clickHandler;
 
-+ (ZMJNoDataView *)zmj_showNDVAndMessage:(NSString *)message zmj_image:(NSString *)image zmj_text:(NSString *)text zmj_textColor:(UIColor *)color zmj_style:(ZMJNoDataViewStyle)style zmj_toView:(UIView *)view zmj_clickHandler:(ZMJNDVActionBlock)clickHandler;
++ (ZMJNoDataView *)zmj_showNDVAndStyle:(ZMJNoDataViewStyle)style zmj_message:(NSString *)message zmj_image:(NSString *)image zmj_btnText:(NSString *)btnText zmj_toView:(UIView *)view zmj_clickHandler:(ZMJNDVActionBlock)clickHandler;
 
-+ (ZMJNoDataView *)zmj_showNDVAndMessage:(NSString *)message zmj_image:(NSString *)image zmj_text:(NSString *)text zmj_textColor:(UIColor *)color zmj_style:(ZMJNoDataViewStyle)style zmj_toView:(UIView *)view zmj_frame:(CGRect)frame zmj_clickHandler:(ZMJNDVActionBlock)clickHandler;
++ (ZMJNoDataView *)zmj_showNDVAndStyle:(ZMJNoDataViewStyle)style zmj_message:(NSString *)message zmj_image:(NSString *)image zmj_btnText:(NSString *)btnText zmj_toView:(UIView *)view zmj_frame:(CGRect)frame zmj_clickHandler:(ZMJNDVActionBlock)clickHandler;
 
 + (void)zmj_hideNDVForView:(UIView *)view;
 

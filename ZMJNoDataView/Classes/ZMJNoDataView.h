@@ -34,9 +34,9 @@ typedef NS_ENUM(NSUInteger, ZMJNoDataViewStyle) {
 
 @property (assign, nonatomic) CGFloat zmj_cornerRadius;
 
-+ (instancetype)zmj_showNDVAddedTo:(UIView *)view zmj_style:(ZMJNoDataViewStyle)style zmj_delegate:(nullable id<zmj_ndvDelegate>)delegate;
++ (instancetype)zmj_showNDVAddedTo:(UIView *)view zmj_style:(ZMJNoDataViewStyle)style zmj_message:(NSString *)message zmj_btnText:(NSString *)btnText zmj_delegate:(nullable id<zmj_ndvDelegate>)delegate;
 
-+ (instancetype)zmj_showNDVAddedTo:(UIView *)view zmj_frame:(CGRect)frame zmj_style:(ZMJNoDataViewStyle)style zmj_delegate:(nullable id<zmj_ndvDelegate>)delegate;
++ (instancetype)zmj_showNDVAddedTo:(UIView *)view zmj_frame:(CGRect)frame zmj_style:(ZMJNoDataViewStyle)style zmj_message:(NSString *)message zmj_btnText:(NSString *)btnText zmj_delegate:(nullable id<zmj_ndvDelegate>)delegate;
 
 + (BOOL)zmj_hideNDVForToView:(UIView *)view;
 

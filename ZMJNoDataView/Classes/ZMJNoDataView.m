@@ -24,12 +24,14 @@
 @property (strong, nonatomic) UIButton *zmj_ndvBtn;
 
 @property (assign, nonatomic) ZMJNoDataViewStyle zmj_style;
+@property (copy, nonatomic) NSString *zmj_message;
+@property (copy, nonatomic) NSString *zmj_btnText;
 
 @end
 
 @implementation ZMJNoDataView
 
-- (instancetype)initWithFrame:(CGRect)frame zmj_style:(ZMJNoDataViewStyle)style zmj_delegate:(nullable id<zmj_ndvDelegate>)delegate {
+- (instancetype)initWithFrame:(CGRect)frame zmj_style:(ZMJNoDataViewStyle)style zmj_message:(NSString *)message zmj_btnText:(NSString *)btnText zmj_delegate:(nullable id<zmj_ndvDelegate>)delegate {
     self = [super initWithFrame:frame];
     if (self) {
         
@@ -37,7 +39,10 @@
         
         self.alpha = 0.0f;
         self.frame = frame;
+        
         _zmj_style = style;
+        _zmj_message = message;
+        _zmj_btnText = btnText;
         _zmj_delegate = delegate;
         
         [self zmj_initData];
@@ -62,7 +67,7 @@
     return self;
 }
 
-+ (instancetype)zmj_showNDVAddedTo:(UIView *)view zmj_style:(ZMJNoDataViewStyle)style zmj_delegate:(nullable id<zmj_ndvDelegate>)delegate {
++ (instancetype)zmj_showNDVAddedTo:(UIView *)view zmj_style:(ZMJNoDataViewStyle)style zmj_message:(NSString *)message zmj_btnText:(NSString *)btnText zmj_delegate:(nullable id<zmj_ndvDelegate>)delegate {
     
     if (view) {}
     else {
@@ -70,12 +75,12 @@
         view = [UIViewController zmj_topViewController].view;
     }
     
-    return [self zmj_showNDVAddedTo:view zmj_frame:view.bounds zmj_style:style zmj_delegate:delegate];
+    return [self zmj_showNDVAddedTo:view zmj_frame:view.bounds zmj_style:style zmj_message:message zmj_btnText:btnText zmj_delegate:delegate];
 }
 
-+ (instancetype)zmj_showNDVAddedTo:(UIView *)view zmj_frame:(CGRect)frame zmj_style:(ZMJNoDataViewStyle)style zmj_delegate:(nullable id<zmj_ndvDelegate>)delegate {
++ (instancetype)zmj_showNDVAddedTo:(UIView *)view zmj_frame:(CGRect)frame zmj_style:(ZMJNoDataViewStyle)style zmj_message:(NSString *)message zmj_btnText:(NSString *)btnText zmj_delegate:(nullable id<zmj_ndvDelegate>)delegate {
     
-    ZMJNoDataView *zmj_ndv = [[self alloc] initWithFrame:frame zmj_style:style zmj_delegate:delegate];
+    ZMJNoDataView *zmj_ndv = [[self alloc] initWithFrame:frame zmj_style:style zmj_message:message zmj_btnText:btnText zmj_delegate:delegate];
     [view addSubview:zmj_ndv];
     
     [UIView animateWithDuration:0.25f animations:^{
@@ -184,8 +189,15 @@
         make.top.leading.trailing.equalTo(self.zmj_contentView);
     }];
     
+    CGFloat zmj_y = zmj_size(15);
+    
+    if ([_zmj_message stringByReplacingOccurrencesOfString:@" " withString:@""].length == 0) {
+        
+        zmj_y = 0;
+    }
+    
     [_zmj_ndvLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.zmj_ndvImageView.mas_bottom).offset(zmj_size(15));
+        make.top.equalTo(self.zmj_ndvImageView.mas_bottom).offset(zmj_y);
         make.leading.trailing.equalTo(self.zmj_ndvImageView);
     }];
     
@@ -195,7 +207,7 @@
         case ZMJNoDataViewStyleGesture: {
             
             [_zmj_ndvBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.zmj_ndvLabel.mas_bottom).offset(zmj_size(25));
+                make.top.equalTo(self.zmj_ndvLabel.mas_bottom);
                 make.centerX.equalTo(self.mas_centerX);
                 make.bottom.equalTo(self.zmj_contentView);
                 make.width.mas_equalTo(zmj_screenWidth / 2);
@@ -206,12 +218,22 @@
             
         case ZMJNoDataViewStyleBtn: {
             
+            zmj_y = zmj_size(25);
+            
+            CGFloat zmj_height = zmj_size(40);
+            
+            if ([_zmj_btnText stringByReplacingOccurrencesOfString:@" " withString:@""].length == 0) {
+                
+                zmj_y = 0;
+                zmj_height = 0;
+            }
+            
             [_zmj_ndvBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.zmj_ndvLabel.mas_bottom).offset(zmj_size(25));
+                make.top.equalTo(self.zmj_ndvLabel.mas_bottom).offset(zmj_y);
                 make.centerX.equalTo(self.mas_centerX);
                 make.bottom.equalTo(self.zmj_contentView);
                 make.width.mas_equalTo(zmj_screenWidth / 2.5);
-                make.height.mas_equalTo(zmj_size(40));
+                make.height.mas_equalTo(zmj_height);
             }];
         }
             break;
@@ -257,11 +279,9 @@
 - (UIButton *)zmj_ndvBtn {
     if (!_zmj_ndvBtn) {
         _zmj_ndvBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_zmj_ndvBtn setTitleColor:[UIColor zmj_dynamicColor:zmj_color(51, 51, 51) zmj_darkColor:zmj_color(51, 51, 51)] forState:UIControlStateNormal];
         _zmj_ndvBtn.titleLabel.font = zmj_pingFangSCRegularSize((zmj_defaultFontSize + 2));
         [_zmj_ndvBtn addTarget:self action:@selector(zmj_btnAction:) forControlEvents:UIControlEventTouchUpInside];
-        
-        _zmj_ndvBtn.layer.borderWidth = 1;
-        _zmj_ndvBtn.clipsToBounds = YES;
     }
     return _zmj_ndvBtn;
 }
