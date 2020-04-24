@@ -256,7 +256,7 @@
 
 - (UIButton *)zmj_ndvBtn {
     if (!_zmj_ndvBtn) {
-        _zmj_ndvBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+        _zmj_ndvBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _zmj_ndvBtn.titleLabel.font = zmj_pingFangSCRegularSize((zmj_defaultFontSize + 2));
         [_zmj_ndvBtn addTarget:self action:@selector(zmj_btnAction:) forControlEvents:UIControlEventTouchUpInside];
         
