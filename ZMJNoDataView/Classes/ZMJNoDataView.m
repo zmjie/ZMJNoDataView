@@ -220,21 +220,26 @@
             
             zmj_y = zmj_size(25);
             
-            CGFloat zmj_height = zmj_size(40);
-            
             if ([_zmj_btnText stringByReplacingOccurrencesOfString:@" " withString:@""].length == 0) {
                 
                 zmj_y = 0;
-                zmj_height = 0;
+                
+                [_zmj_ndvBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.equalTo(self.zmj_ndvLabel.mas_bottom).offset(zmj_y);
+                    make.centerX.equalTo(self.mas_centerX);
+                    make.bottom.equalTo(self.zmj_contentView);
+                    make.width.mas_equalTo(zmj_screenWidth / 2.5);
+                }];
+            }else {
+                
+                [_zmj_ndvBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.top.equalTo(self.zmj_ndvLabel.mas_bottom).offset(zmj_y);
+                    make.centerX.equalTo(self.mas_centerX);
+                    make.bottom.equalTo(self.zmj_contentView);
+                    make.width.mas_equalTo(zmj_screenWidth / 2.5);
+                    make.height.mas_equalTo(zmj_size(40));
+                }];
             }
-            
-            [_zmj_ndvBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.zmj_ndvLabel.mas_bottom).offset(zmj_y);
-                make.centerX.equalTo(self.mas_centerX);
-                make.bottom.equalTo(self.zmj_contentView);
-                make.width.mas_equalTo(zmj_screenWidth / 2.5);
-                make.height.mas_equalTo(zmj_height);
-            }];
         }
             break;
             
