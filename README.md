@@ -17,7 +17,7 @@ ZMJNoDataView is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ZMJNoDataView', '~> 0.0.7'
+pod 'ZMJNoDataView', '~> 0.0.8'
 ```
 
 ## Author
